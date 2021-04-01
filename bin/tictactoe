@@ -12,7 +12,7 @@ def game_start
  1 - You vs Computer
  2 - You vs Your Friend"
 
-begin 
+begin
  player_mode = gets.strip
 end until player_mode.to_i.between?(0,2)
 
