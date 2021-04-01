@@ -51,6 +51,7 @@ class Game
 
   def turn
     @board.display
+    puts current_player.token
     begin #Executes code while conditional is false.
       input = current_player.move(@board)#string
     end until @board.valid_move?(input)  #This is the conditional/input validation
