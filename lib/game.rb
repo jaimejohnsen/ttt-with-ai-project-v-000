@@ -51,6 +51,7 @@ class Game
 
   def turn
     begin #Executes code while conditional is false.
+      display.board
       input = current_player.move(@board)#string
     end until @board.valid_move?(input)  #This is the conditional/input validation
     @board.update(input, current_player)# switching
