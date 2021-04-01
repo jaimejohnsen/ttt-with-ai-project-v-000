@@ -16,7 +16,6 @@ begin
  player_mode = gets.strip
 end until player_mode.to_i.between?(1,3)
 
-
  if player_mode == "2"
    puts "Do you want to go first? [y/ n]"
    if gets.strip == "y" #need to rule out: just enter, symbols, integers or  other letters
