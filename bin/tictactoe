@@ -16,17 +16,17 @@ begin
  player_mode = gets.strip
 end until player_mode.to_i.between?(1,3)
 
- if player_mode == "1"
+ if player_mode == "2"
    puts "Do you want to go first? [y/ n]"
    if gets.strip == "y" #need to rule out: just enter, symbols, integers or  other letters
      Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new).play
    else   Game.new(Players::Computer.new("X"), Players::Human.new("O"), Board.new).play
    end
 
-  elsif player_mode == "0"
+ elsif player_mode == "1"
     Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
 
-  elsif player_mode == "2"
+  elsif player_mode == "3"
     Game.new(Players::Human.new("X"), Players::Human.new("O"), Board.new).play
   end
   puts "Would like to play again? [y/ n]" #same as line 19
