@@ -59,6 +59,7 @@ class Game
 
   def play
     turn until over?
+    @board.display
     if draw?
       puts "Cat's Game!"
     else
